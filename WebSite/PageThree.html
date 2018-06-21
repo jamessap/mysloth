@@ -1,0 +1,67 @@
+
+
+
+<!DOCTYPE html>  
+<htm ng-app>  
+  
+  <head>  
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  	<script src="assets/PageThree.js"></script>
+  	<script src="assets/sharedAssets.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+       
+  <link rel="import" href="https://www.polymer-project.org/0.5/components/paper-ripple/paper-ripple.html">
+  <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+  <link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
+
+  
+
+     <script src="https://maps.googleapis.com/maps/api/js?key=vNIXE0xscrmjlyV-12Nj_BvUPaw=&callback=initMap" async defer></script>
+
+  <!--
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.22&sensor=false&libraries=drawing,geometry,places&client=gme-insightusa&signature=qrfyJqJkb-kCjxc6wwlTqEl0XIo=&sensor=false&channel=SEP_GoogleMaps"></script> -->
+  </head>  
+  
+    <body onload="init();">  
+
+    	<div id="header">  
+			 <ul id="nav">
+			  
+				<li> 
+					 
+					<div class="button raised white">
+						<div class="center" onclick="goToOne();" fit>ONE</div>
+						<paper-ripple fit></paper-ripple>
+					</div>
+					 
+				</li>
+
+				<li> 
+					 
+					<div class="button raised white">
+						<div class="center" onclick="submit();" fit>SUBMIT</div>
+						<paper-ripple fit></paper-ripple>
+					</div>
+					 
+				</li>
+
+			 </ul>
+		</div>
+          
+		<div id="canvas">  
+
+			<!-- FAB -->
+        <div class="kc_fab_wrapper"></div>
+ 
+
+		</div>  
+          
+    </body>  
+
+ 
+
+</html>   
+
+ 
