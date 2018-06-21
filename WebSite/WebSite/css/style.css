@@ -1,0 +1,556 @@
+ body {
+    height:100%; 
+    margin:0; 
+    font: 100%/1.618 sans-serif;
+    overflow:hidden;
+
+}
+ 
+ 
+
+#canvas{
+	height:100%;
+}
+
+div#header {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 5px 0 10px;
+    overflow:auto; zoom: 1;
+    background-color: orange;
+     z-index: 2;
+      overflow-x: hidden;
+}
+
+ /**********************************/
+ 
+ @media screen {
+    body>div#header {
+        position:fixed;
+    }
+ 
+}
+
+* html body {
+    overflow:hidden;
+}
+
+* html div#content {
+    height:100%;
+    overflow:auto;
+}
+
+
+#nav {
+    text-align:center;
+    width:100%;
+  
+}
+
+#nav li {
+    display:inline;
+    margin: 0 0 0 5px;
+}
+
+#nav li a {
+    padding: 5px 15px; 
+    font-weight: bold;
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav li a:hover, #nav li a:focus {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/**********************************/
+.button {
+    display:block;
+    cursor:pointer;
+}
+.panel { 
+    background-color:#999999;
+    color:white;
+    height:100%;
+    width: auto;
+    position: absolute;
+    top: 0; 
+    z-index: 2;
+}
+.panel .panel-content {
+    padding-top:15px;
+    display: none;
+}
+
+#inner-panel{
+ 
+    position:absolute;
+    top:100;
+    left:0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ 
+ 
+.list-item { 
+  font: 100%/1.618 sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+ 
+.list-item :last-child {
+  border: none;
+}
+ 
+.list-item  a {
+
+  text-decoration: none;
+  color: white;
+  display: block;
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+ 
+.list-item  a:hover {
+  font-size: 115%; 
+  color: black;
+  background: #f6f6f6;
+}
+ 
+/********************************************************************/
+ 
+ 
+#canvas-PageTwo{
+  
+
+ width:100%;
+height:600px;
+ 
+   
+}
+ 
+.imgsPageTwo{
+    display:inline-block;
+    margin: 10px 10px 10px 10px !important;
+}
+
+.imgsdivs{
+ /* border:3px solid purple;*/
+display:inline-block;
+  margin: 10px 10px 10px 10px !important;
+}
+/********************************************************************/
+
+
+ 
+/***************************************************** index page  **************************************************************/
+/*.slideshow {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  position:relative;
+  width:600px;
+  overflow:hidden;
+  background: #1a1a1a;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: .3em;
+  margin-top: 30px;
+}
+ */
+
+.imageslide{
+    width:600px;
+    height:400px;
+ /*   margin: 0 auto;
+    margin-bottom: 20px;*/
+       margin: 0 auto;  
+   margin-left:auto;
+   margin-right:0; 
+
+    overflow:hidden;
+    position:relative;
+    text-align: center;
+     z-index: 1;
+}
+
+.imageslide .slider-content {
+  position: absolute;
+  width:100%;
+  height:400px;
+  
+}
+
+.animate-enter,.animate-leave {
+    -webkit-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+    -moz-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+    -ms-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+    -o-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+    transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+}
+
+.animate-enter {
+    left:100%;
+}
+
+.animate-enter.animate-enter-active {
+    left:0;
+}
+
+.animate-leave {
+    left:0;
+}
+
+.animate-leave.animate-leave-active {
+    margin-left:-100%;
+}
+ 
+
+/*******************************************************************************************************************/
+
+/*
+ 
+
+small {
+    display: block;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+#drop {
+    border: solid 1px black;
+    padding: 40px 0;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+    color: rgba(#000, 0.5);
+}
+
+.imgs {
+    width: 55%;
+}
+
+#image {
+    margin-bottom: 20px;
+}
+
+#details {
+    padding: 10px;
+    text-align: center;
+    height: 100vh;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+}
+
+.swatch {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: solid 1px rgba(#000, 0.3);
+    border-radius: 50px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+}*/
+
+/******************************************** material design buttons *********************************************************/
+
+    /* Button */
+    .button {
+     /* display: inline-block; 
+      position: relative;*/
+      width: 120px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      font-size: 0.9em;
+      background-color: #fff;
+      color: #646464;
+      display: inline-block;
+    }
+    
+    .button > paper-ripple {
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .button.narrow {
+      width: 60px;
+    }
+  
+  .button.white { 
+      background-color: rgbs(255,255,255,0.5);
+      color: darkgrey; 
+    }
+
+    
+    .panelButton {
+     text-decoration: none;
+  color: white;
+  display: block;
+    /*  line-height: 32px;
+      border-radius: 2px;
+      font-size: 0.9em;
+      background-color: #fff;
+      color: #646464;
+       display: inline-block; */
+    }
+.panelButton.panel{
+   background-color: white;
+      color: darkgrey; 
+
+      
+/*
+border:3px solid purple;
+
+
+  text-decoration: none;
+  color: white;
+  display: block;
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;*/
+
+  }
+ 
+.button.panel:hover {
+/*  font-size: 115%; 
+  color: black;
+  background: #f6f6f6;*/
+}
+
+    .button.grey {
+      background-color: #eee;
+    }
+    
+    .button.blue {
+      background-color: #4285f4;
+      color: #fff;
+    }
+    
+    .button.green {
+      background-color: #0f9d58;
+      color: #fff;
+    }
+        .panelButton.raised {
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }  
+    .panelButton.raised:active {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+      transition-delay: 0s;
+    }
+    .button.raised {
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+    
+    .button.raised:active {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+      transition-delay: 0s;
+    }
+  .center {
+      text-align: center;
+
+    }
+
+    
+    /******************************************** material design buttons *********************************************************/
+    /*****************************************************************************************************/
+
+    /*888888888888888888888888888888888888888888888888 FAB 888888888888888888888888888888888888*/
+ 
+/*.kc_fab_overlay {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.kc_fab_wrapper {
+    z-index: 4;
+    width: 1px;
+    height: 1px;
+    position: fixed;
+    right: 40px;
+    bottom: 10px;
+}
+
+#undoRedoWrapper{
+     z-index: 4;
+     position: fixed;
+    right: 50%;
+    bottom: 32px;
+}
+
+#shapesWrapper{
+         z-index: 4;
+     position: fixed;
+    left: 50%;
+    bottom: 60px;
+
+}
+
+#geofenceUIWrapper{
+         z-index:4;
+     position: fixed;
+    left: 50%;
+    bottom: 32px;
+
+}
+
+
+.geo_icns{
+    width:15px;
+    height: 15px;
+    padding: 0px 5px 0px 5px;
+  
+}
+
+.geo_btns{
+padding: 5px 5px 5px 5px;
+
+}
+*/
+
+.sub_fab_btns_wrapper { 
+    right: 0;
+    bottom: 75px;
+    position: absolute;
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in;
+    -ms-transition: opacity 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
+}
+
+    .sub_fab_btns_wrapper.show {
+        display: block;
+        opacity: 1;
+    }
+
+    .sub_fab_btns_wrapper button {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: #F44336;
+        margin-bottom: 12px;
+        margin-right: 26px;
+        padding: 0;
+        border: none;
+        outline: none;
+        color: #FFF;
+        font-size: 19px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: .3s;
+
+    }
+
+button.kc_fab_main_btn {
+    background-color: #F44336;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: #F44336;
+    right: 16px;
+    bottom: 16px;
+    position: absolute;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 36px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+}
+
+.kc_fab_main_btn span {
+    transition: .5s;
+}
+
+.kc_fab_main_btn:hover span {
+}
+
+.kc_fab_main_btn:focus {
+    transform: scale(1.1);
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.ink {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.animate {
+    -webkit-animation: ripple 0.65s linear;
+    -moz-animation: ripple 0.65s linear;
+    -ms-animation: ripple 0.65s linear;
+    -o-animation: ripple 0.65s linear;
+    animation: ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+    }
+}
+
+@-moz-keyframes ripple {
+    100% {
+        opacity: 0;
+        -moz-transform: scale(2.5);
+    }
+}
+
+@-o-keyframes ripple {
+    100% {
+        opacity: 0;
+        -o-transform: scale(2.5);
+    }
+}
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+/*88888888888888888888888888*/
