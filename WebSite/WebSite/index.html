@@ -1,0 +1,82 @@
+
+
+
+<!DOCTYPE html>  
+<htm ng-app>  
+  
+  <head>  
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  	<script src="assets/HomePage.js"></script>
+  	<script src="assets/sharedAssets.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+       
+   <link rel="import" href="https://www.polymer-project.org/0.5/components/paper-ripple/paper-ripple.html">
+  <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+  <link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
+
+    
+    
+  </head>  
+  
+    <body onload="initialize();">  
+
+    	  <div id="canvas">  
+			 	<!-- FAB -->
+			<div class="kc_fab_wrapper"></div>
+        </div>  
+        
+
+    	<div id="header">  
+			 <ul id="nav">
+			 	<!--
+			 	<li><a href="#" onclick="goToPageOne();" >Page One</a></li>
+			 	<li><a href="#" onclick="goToPageThree();" >Page Three</a></li>   
+			 -->
+
+			 	<li> 
+					 
+					<div class="button raised white">
+						<div class="center" onclick="goToPageOne();" fit>PAGE ONE</div>
+						<paper-ripple fit></paper-ripple>
+					</div>
+					 
+				</li>
+
+				<li> 
+					 
+					<div class="button raised white">
+						<div class="center" onclick="goToPageThree();" fit>PAGE THREE</div>
+						<paper-ripple fit></paper-ripple>
+					</div>
+					 
+				</li>
+			 </ul>
+		</div>
+          
+      
+          
+    </body>  
+
+
+	<script>
+		// setTimeout(function(){ 
+		function slideShowController($scope, $timeout) {  
+		var slidesInSlideshow = 3;  
+		var slidesTimeIntervalInMs = 5000; 
+
+			$scope.slideshow = 1;  
+			var slideTimer =  
+			$timeout(function interval() {  
+				 getColors();
+				$scope.slideshow = ($scope.slideshow % slidesInSlideshow) + 1;  
+				slideTimer = $timeout(interval, slidesTimeIntervalInMs);  
+			}, slidesTimeIntervalInMs);  
+		} 
+	//	 }, 0);
+	</script>
+
+</html>   
+
+ 
